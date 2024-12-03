@@ -1,0 +1,78 @@
+/* Basic styles for the web page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin-top: 20px; /* Corrected property */
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding:0;
+}
+
+/* General Styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav Bar Styles */
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      
+}
+
+.nav-bar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center the links */
+    }
+
+    .nav-bar a {
+        display: block; /* Make links full width */
+        text-align: center; /* Center text */
+    }
+}
+.flex-container {
+    display: flex;
+    background-color: lightblue;
+}
