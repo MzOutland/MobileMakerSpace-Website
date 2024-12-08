@@ -140,6 +140,71 @@
             </ul>
           </article>
         </div>
+        <h1>3D Printer Information</h1>
+
+        <!-- Table Container -->
+         <table id="printerTable">
+          <caption>3D Printers</caption>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Manufacturer</th>
+              <th>Print Speed (mm/s)</th>
+              <th>Build Volume (mm)</th>
+              <th>Price (USD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Printer info will be inserted here by JavaScript-->
+          </tbody>
+         </table>
+        <script>
+          //JSON Array with 3D printer information
+          const printers = [
+            {
+              "model": "ender 3 V2", 
+              "manufacturer": "Creality", 
+              "printSpeed": 180, 
+              "buildVolume": 220000, 
+              "price": 249.99
+            }, 
+            {
+              "model": "Prusa i3 MK3S+", 
+              "manufacturer": "Prusa Research", 
+              "printSpeed": 200, 
+              "buildVolume": 250000, 
+              "price": 749.99
+            }, 
+              "model": "Bambu Lab A1", 
+              "manufacturer": "Bambu Lab", 
+              "printSpeed": "500", 
+              "buildVolume": 220000, 
+              "price": 319.33
+          ];
+
+          // Function to generate table rows from the JSON data
+          function generatePrinterTable(data) {
+            const tableBody = document.querySelector('#printerTable tbody');
+
+            // Loop through printers array and create table rows
+            data.forEach(printer => {
+              const row = document.createElement('tr');
+
+              // Create a cell for each printer attribute and append to the row
+              Object.values(printer).forEach(value => {
+                const cell = document.createElement('td');
+                cell.textContent = value;
+                row.appendChild(cell);
+              });
+
+              // Append the row to the table body
+              tableBody.appendChild(row);
+            });
+          }
+
+          // Call the function to generate the table
+          generatePrinterTable(printers);
+         </script>
         <div class="col-12 col-md-6">
           <aside>
             <h2>Equipment</h2>
