@@ -7,6 +7,9 @@ function changeTextColor() {
     heading.style.color = "blue";
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+// all of my JavaScript code goes here. 
+
 // Create a JSON array for the 3D printers
 const printers = [
   {
@@ -33,7 +36,7 @@ const printers = [
 ];
 
 // Call function to create the table
-generatePrinterTable() {
+function generatePrinterTable() {
   // Get the <tbody> element where rows will be added
   const tableBody = document.querySelector("#printerTable tbody");
 
