@@ -7,8 +7,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--link rel="stylesheet" href="Styles"/
-      -->
+    <!--link rel="stylesheet" href="Styles"/-->
 
     <title>3D Printer Mobile MakerSpace</title>
 
@@ -18,45 +17,34 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <style>
-      table {
-        width: 100%
-        border-collapse; collapse;
-        margin-top: 20px;
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+    </head>
+
+      
       }
-      table, th, td {
-        border: 1px solid black;
-      }
-      th, td {
-        padding: 10px;
-        text-align: left;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-      caption {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-      }
-    </style>
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    
+      <table id="printerTable">
+        <thead>
+          <tr>
+            <th>Column1</th>
+            <th>Column2</th>
+            <th>Column3</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      
+    
 
 
     <!-- The website JavaScript file -->
      <script src="script.js" defer></script> 
      <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
-    <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
-        });
-        calendar.render();
-      });
-
+   
+      
     </script>
 
   </head>
@@ -102,7 +90,6 @@
 
     <header>
       <h1>3D PRINTER MOBILE MAKERSPACE</h1>
-      <br>
       <br>
     </header>
 
@@ -159,54 +146,15 @@
           <tbody>
             <!-- Printer info will be inserted here by JavaScript-->
           </tbody>
+
+          <!-- Data will be inserted here by JavaScript-->
          </table>
 
-        <script>
-          //JSON Array with 3D printer information
-          const printers = [
-            {
-              "model": "ender 3 V2", 
-              "manufacturer": "Creality", 
-              "printSpeed": 180, 
-              "buildVolume": 220000, 
-              "price": 249.99
-            }, 
-            {
-              "model": "Prusa i3 MK3S+", 
-              "manufacturer": "Prusa Research", 
-              "printSpeed": 200, 
-              "buildVolume": 250000, 
-              "price": 749.99
-            }, 
-              "model": "Bambu Lab A1", 
-              "manufacturer": "Bambu Lab", 
-              "printSpeed": "500", 
-              "buildVolume": 220000, 
-              "price": 319.33
-          ];
-
-          // Function to generate table rows from the JSON data
-          function generatePrinterTable(data) {
-            const tableBody = document.querySelector('#printerTable tbody');
-
-            // Loop through printers array and create table rows
-            data.forEach(printer => {
-              const row = document.createElement('tr');
-
-              // Create a cell for each printer attribute and append to the row
-              Object.values(printer).forEach(value => {
-                const cell = document.createElement('td');
-                cell.textContent = value;
-                row.appendChild(cell);
-              });
-
-              // Append the row to the table body
-              tableBody.appendChild(row);
-            });
-          }
-
-          // Call the function to generate the table
-          generatePrinterTable(printers);
+        <script src=<"js/script.js"></script>
+          
+      
+          
+          
          </script>
         <div class="col-12 col-md-6">
           <aside>

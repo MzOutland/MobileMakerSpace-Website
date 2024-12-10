@@ -7,49 +7,36 @@ function changeTextColor() {
     heading.style.color = "blue";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-// all of my JavaScript code goes here. 
+// Function to fetch the JSON data and create the table
+function fetchPrinterData() {
+  // Fetch the JSON data from the file
+  fetch('printers.json') // Adjust the path if the file is in a subfolder
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json(); // Parse the JSON data
+    })
+    .then(data => generatePrinterTable(data)) // Pass the data to the table
+    .catch(error => console.error('Error fetching data:', error));
+}
 
-// Create a JSON array for the 3D printers
-const printers = [
-  {
-    "model": "Ender 3 V2",
-    "manufacturer": "Creality",
-    "printSpeed": 180,
-    "buildVolume": 220000,
-    "price": 249.99
-  },
-  {
-    "model": "Prusa i3 MK3S+",
-    "manufacturer": "Prusa Research",
-    "printSpeed": 200,
-    "buildVolume": 250000,
-    "price": 749.99
-  },
-  {
-    "model": "Ultimaker S3",
-    "manufacturer": "Ultimaker",
-    "printSpeed": 300,
-    "buildVolume": 215000,
-    "price": 4499.00
-  }
-];
-
-// Call function to create the table
-function generatePrinterTable() {
-  // Get the <tbody> element where rows will be added
+// Function to generate the table from the JSON data
+function generatePrinterTable(data) {
   const tableBody = document.querySelector("#printerTable tbody");
 
-  // Loop through the printers array
-  printers.forEach(printer => {
-    // Create a new table row
-    const row = document.createElement("tr");
+  if (!tableBody) {
+    console.error("Table body not found!");
+    return;
+  }
 
-    // Add a cell for each property of the printer
+  data.forEach(printer => {
+    const row = document.createElement('tr');
+
     Object.values(printer).forEach(value => {
-      const cell = document.createElement("td");
-      cell.textContent = value; //Set the cell text
-      row.appendChild(cell); // Add the cell to the row
+      const cell = document.createElement('td');
+      cell.textContent = value;
+      row.appendChild(cell);
     });
 
     // Append the row to the table body
@@ -57,19 +44,5 @@ function generatePrinterTable() {
   });
 }
 
-// Call the function to generate the table when the page loads
-document.addEventListener("DOMContentLoaded", generatePrinterTable);
-// Change the text color of an element
-function changeTextColor() {
-  const heading = document.querySelector("h1");
-  heading.style.color = "blue";
-}
-
-// Example: Log printer data to the console
-function logPrinters() {
-  console.log("3D Printer Information:", printers);
-}
-
-// Call functions for testing
-changeTextColor();
-logPrinters();
+// Call the function to fetch data when the page loads
+document.addEventListener("DOMContentLoaded", fetchPrinterData);
