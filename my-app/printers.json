@@ -1,4 +1,3 @@
-// Create a JSON array for the 3D printers
 [
     {
       "model": "Ender 3 V2",
