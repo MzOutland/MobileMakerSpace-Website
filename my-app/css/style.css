@@ -1,13 +1,19 @@
 /* Basic styles for the web page */
+/* Basic styles for the web page */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    margin-top: 20px; /* Corrected property */
     margin: 0;
     padding: 0;
 }
 
+/* Reset default margin and padding for lists */
+ul {
+    margin: 0;
+    padding: 0;
+}
 
+/* General Styles */
 h1 {
     color: blue;
     text-align: center;
@@ -17,27 +23,14 @@ p {
     font-size: 16px;
     color: #333;
 }
-/* Reset default margin and padding */
-body, ul {
-    margin: 0;
-    padding:0;
-}
-
-/* General Styles */
-body, ul {
-    margin: 0;
-    padding: 0;
-}
 
 /* Nav Bar Styles */
 nav {
     background-color: #333;
     position: sticky;
     top: 0;
-    background-color: #333;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      
 }
 
 .nav-bar {
@@ -72,30 +65,34 @@ nav {
         text-align: center; /* Center text */
     }
 }
+
+/* Flex Container */
 .flex-container {
     display: flex;
     background-color: lightblue;
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-    
-    table, th, td {
-        border: 1px solid black;
-    }
-    
-    th, td {
-        padding: 10px;
-        text-align: left;
-    }
-    
-    th {
-        background-color: #f2f2f2;
-    }
-    
-    caption {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
