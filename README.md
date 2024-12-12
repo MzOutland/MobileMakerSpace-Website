@@ -15,11 +15,12 @@ This website is a work in progress. It is a "How to" for educators as a means of
 - HTML
 - CSS
 - JavaScript
-- Any other libraries/frameworks (e.g., Bootstrap, React, etc.)
+- Bootstrap and Flexbox 
 
 ## Installation
 
-1. Clone the repository:
+1. To view the web site, use Liveview
+2. Clone the repository:
    ```powershell
    git clone https://github.com/MzOutland/MobileMakerSpace-Website.git
    ```
