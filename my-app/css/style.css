@@ -1,5 +1,4 @@
 /* Basic styles for the web page */
-/* Basic styles for the web page */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -14,7 +13,6 @@ body {
     background-position: center;
     background-attachment: fixed;
   }
-  
 
 /* Reset default margin and padding for lists */
 ul {
@@ -105,3 +103,43 @@ caption {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
+#models-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Distribute items evenly */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Add padding around the container */
+  }
+  
+  #models-container div {
+    flex: 1 1 calc(25% - 20px); /* Each item takes up 25% width minus gap */
+    max-width: 200px; /* Prevent items from getting too wide */
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #models-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  #models-container h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  #models-container a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  #models-container a:hover {
+    text-decoration: underline;
+  }
+  
