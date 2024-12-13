@@ -3,13 +3,12 @@ console.log("Welcome to my webpage!");
 
 // Change the text color of an element
 function changeTextColor() {
-    const heading = document.querySelector("h1");
-    heading.style.color = "blue";
+  const heading = document.querySelector("h1");
+  heading.style.color = "blue";
 }
 
 // Function to fetch the JSON data and create the table
 function fetchPrinterData() {
-  // Fetch the JSON data from the file
   fetch('printers.json') // Adjust the path if the file is in a subfolder
     .then(response => {
       if (!response.ok) {
@@ -44,5 +43,44 @@ function generatePrinterTable(data) {
   });
 }
 
-// Call the function to fetch data when the page loads
-document.addEventListener("DOMContentLoaded", fetchPrinterData);
+// Function to fetch Thingiverse data
+function fetchThingiverseData() {
+  const client_id = '6d2fa944eb96b3083c57'; // Replace with Thingiverse API client_id
+  const apiUrl = `https://api.thingiverse.com/popular?access_token=${client_id}`;
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => displayModels(data))
+    .catch(error => console.error('Error fetching Thingiverse data:', error));
+}
+
+// Function to display Thingiverse models
+function displayModels(models) {
+  const container = document.getElementById('models-container');
+
+  if (!container) {
+    console.error("Models container not found!");
+    return;
+  }
+
+  models.forEach(model => {
+    const modelElement = document.createElement('div');
+    modelElement.innerHTML = `
+      <img src="${model.thumbnail}" alt="${model.name}" />
+      <h3>${model.name}</h3>
+      <a href="${model.public_url}" target="_blank">View on Thingiverse</a>
+    `;
+    container.appendChild(modelElement);
+  });
+}
+
+// Call the functions when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+  fetchPrinterData();      // Fetch and display printer data
+  fetchThingiverseData();  // Fetch and display Thingiverse data
+});
