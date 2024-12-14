@@ -61,7 +61,7 @@ if (modelsContainer) {
 // Function to fetch Thingiverse data
 function fetchThingiverseData() {
   const client_id = 'cbc36b84ea2ec1f18b3c62753ed65442'; // Replace with Thingiverse API client_id
-  const apiUrl = `https://api.thingiverse.com/popular?access_token=${client_id}`;
+  const apiUrl = `https://api.thingiverse.com/popular?access_token=5d5ee7e67891e16ffc6ab96232fa752c`;
 
   fetch(apiUrl)
     .then(response => {
