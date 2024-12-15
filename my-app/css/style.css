@@ -76,7 +76,7 @@ nav {
 /* Flex Container */
 .flex-container {
     display: flex;
-    background-color: lightblue;
+    background-color: rgb(5, 75, 146);
 }
 
 /* Table Styles */
@@ -141,5 +141,19 @@ caption {
   
   #models-container a:hover {
     text-decoration: underline;
+  }
+  .pink-banner {
+    height: 100px; /* Reduce the height */
+    margin: 20px 0; /* Add some space above and below */
+    padding: 10px; /* Adjust inner spacing */
+    background: linear-gradient(to right, #fce4ec, #f8bbd0); /* Smooth gradient */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    display: flex; /* Optional: align content inside */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: #333; /* Text color to contrast the background */
+    font-weight: bold; /* Make text stand out */
+    font-size: 1.2em; /* Adjust text size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   }
   
