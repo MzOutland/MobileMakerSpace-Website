@@ -1,18 +1,14 @@
 /* Basic styles for the web page */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #736e6e;
+        margin: 0;
+        padding: 0;
+    }
+    
 }
 
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('images/annie-spratt-zA7I5BtFbvw-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
 
 /* Reset default margin and padding for lists */
 ul {
