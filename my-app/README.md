@@ -15,7 +15,7 @@ This website is a work in progress. It is a "How to" for educators as a means of
 - HTML
 - CSS
 - JavaScript
-- Bootstrap and Flexbox 
+- Bootstrap and Flexbox
 
 ## Installation
 
