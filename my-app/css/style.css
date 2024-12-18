@@ -1,22 +1,12 @@
 /* Basic styles for the web page */
 body {
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #736e6e;
-        margin: 0;
-        padding: 0;
-    }
-    
-}
-
-
-/* Reset default margin and padding for lists */
-ul {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin-top: 20px;
     margin: 0;
     padding: 0;
 }
 
-/* General Styles */
 h1 {
     color: blue;
     text-align: center;
@@ -26,34 +16,43 @@ p {
     font-size: 16px;
     color: #333;
 }
+/* General Styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
 
 /* Nav Bar Styles */
 nav {
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make nav stretch across the entire page */
+    background-color: #10d0f1; /* Background color */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
 }
 
+/* Navigation Links */
 .nav-bar {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0.5em 0;
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: space-around; /* Evenly distribute links */
+    list-style: none; /* Remove bullets from list items */
+    margin: 0; /* Remove margin */
+    padding: 10px 0; /* Add padding for height */
+}
+
+.nav-bar li {
+    margin: 0;
 }
 
 .nav-bar a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-    padding: 0.5em 1em;
-    transition: background-color 0.3s ease;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    padding: 5px 10px; /* Add padding around links */
 }
 
 .nav-bar a:hover {
-    background-color: #575757;
-    border-radius: 5px;
+    background-color: #575757; /* Hover effect */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Responsive Styling for Smaller Screens */
@@ -69,87 +68,7 @@ nav {
     }
 }
 
-/* Flex Container */
 .flex-container {
     display: flex;
-    background-color: rgb(5, 75, 146);
+    background-color: lightblue;
 }
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-caption {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-#models-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-around; /* Distribute items evenly */
-    gap: 20px; /* Space between items */
-    padding: 20px; /* Add padding around the container */
-  }
-  
-  #models-container div {
-    flex: 1 1 calc(25% - 20px); /* Each item takes up 25% width minus gap */
-    max-width: 200px; /* Prevent items from getting too wide */
-    background-color: #f9f9f9; /* Light background */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  #models-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  #models-container h3 {
-    margin: 10px 0 5px;
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  #models-container a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  #models-container a:hover {
-    text-decoration: underline;
-  }
-  .pink-banner {
-    height: 100px; /* Reduce the height */
-    margin: 20px 0; /* Add some space above and below */
-    padding: 10px; /* Adjust inner spacing */
-    background: linear-gradient(to right, #fce4ec, #f8bbd0); /* Smooth gradient */
-    border-radius: 8px; /* Rounded corners for a modern look */
-    display: flex; /* Optional: align content inside */
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    color: #333; /* Text color to contrast the background */
-    font-weight: bold; /* Make text stand out */
-    font-size: 1.2em; /* Adjust text size */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  }
-  
