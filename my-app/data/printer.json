@@ -1,0 +1,31 @@
+[
+    {
+      "model": "Ender 3 V2",
+      "manufacturer": "Creality",
+      "speed": "180",
+      "volume": "220x220x250",
+      "price": "279"
+    },
+    {
+      "model": "Prusa i3 MK3S+",
+      "manufacturer": "Prusa Research",
+      "speed": "200",
+      "volume": "250x210x210",
+      "price": "999"
+    },
+    {
+      "model": "Ultimaker S3",
+      "manufacturer": "Ultimaker",
+      "speed": "300",
+      "volume": "230x190x200",
+      "price": "4200"
+    },
+    {
+      "model": "Anycubic Kobra",
+      "manufacturer": "Anycubic",
+      "speed": "180",
+      "volume": "220x220x250",
+      "price": "319"
+    }
+  ]
+  

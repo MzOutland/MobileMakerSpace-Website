@@ -7,37 +7,7 @@ function changeTextColor() {
   heading.style.color = "blue";
 }
 
-// Sample 3D Printer Data
-const printerData = [
-  {
-    model: "Ender 3 V2",
-    manufacturer: "Creality",
-    speed: "180",
-    volume: "220x220x250",
-    price: "279"
-  },
-  {
-    model: "Prusa i3 MK3S+",
-    manufacturer: "Prusa Research",
-    speed: "200",
-    volume: "250x210x210",
-    price: "999"
-  },
-  {
-    model: "Ultimaker S3",
-    manufacturer: "Ultimaker",
-    speed: "300",
-    volume: "230x190x200",
-    price: "4200"
-  },
-  {
-    model: "Anycubic Kobra",
-    manufacturer: "Anycubic",
-    speed: "180",
-    volume: "220x220x250",
-    price: "319"
-  }
-];
+// removed const printerData to use json file. 
 
 // Function to populate the table
 function populatePrinterTable() {
@@ -62,17 +32,17 @@ function populatePrinterTable() {
 document.addEventListener("DOMContentLoaded", populatePrinterTable);
 
 // Function to fetch the JSON data and create the table
-function fetchPrinterData() {
-  fetch('printers.json') // Adjust the path if the file is in a subfolder
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json(); // Parse the JSON data
-    })
-    .then(data => generatePrinterTable(data)) // Pass the data to the table
-    .catch(error => console.error('Error fetching data:', error));
-}
+
+fetch('data/printers.json') // Adjust the path if necessary
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json(); // Parse the JSON data
+  })
+  .then(data => generatePrinterTable(data)) // Pass the data to the table
+  .catch(error => console.error('Error fetching data:', error));
+
 
 // Function to generate the table from the JSON data
 function generatePrinterTable(data) {
