@@ -9,24 +9,7 @@ function changeTextColor() {
 
 // removed const printerData to use json file. 
 
-// Function to populate the table
-function populatePrinterTable() {
-  const tableBody = document.querySelector("#printerTable tbody");
-
-  printerData.forEach(printer => {
-    const row = document.createElement("tr");
-
-    row.innerHTML = `
-      <td>${printer.model}</td>
-      <td>${printer.manufacturer}</td>
-      <td>${printer.speed}</td>
-      <td>${printer.volume}</td>
-      <td>${printer.price}</td>
-    `;
-
-    tableBody.appendChild(row);
-  });
-}
+// removed the Function to populate the table because of json file. 
 
 // Call the function after the DOM is loaded
 document.addEventListener("DOMContentLoaded", populatePrinterTable);
