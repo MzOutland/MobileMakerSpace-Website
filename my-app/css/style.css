@@ -72,3 +72,52 @@ nav {
     display: flex;
     background-color: lightblue;
 }
+
+/* General Table Styling */
+#printerTable {
+    width: 50%; /* Table width */
+    margin: 20px auto; /* Center the table on the page */
+    border-collapse: collapse; /* Clean up borders */
+    font-family: Arial, sans-serif; /* Table font */
+    font-size: 16px; /* Font size */
+  }
+ 
+  /* Styling for the Caption */
+  #printerTable caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+ 
+  /* Header Row Styling */
+  #printerTable thead tr {
+    background-color: #f2f2f2; /* Light gray background */
+  }
+ 
+  #printerTable th {
+    padding: 10px; /* Add space inside cells */
+    border: 1px solid #ddd; /* Add borders */
+    text-align: center; /* Center-align text */
+    font-weight: bold; /* Bold header text */
+  }
+ 
+  /* Body Row Styling */
+  #printerTable td {
+    padding: 8px; /* Add space inside cells */
+    border: 1px solid #ddd; /* Add borders */
+    text-align: center; /* Center-align text */
+  }
+ 
+  /* Zebra Stripe Rows */
+  #printerTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+  }
+ 
+  #printerTable tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+  }
+ 
+  /* Hover Effect */
+  #printerTable tbody tr:hover {
+    background-color: #e2f7ff; /* Light blue on hover */
+  }

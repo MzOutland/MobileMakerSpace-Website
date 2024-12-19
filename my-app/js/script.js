@@ -7,6 +7,60 @@ function changeTextColor() {
   heading.style.color = "blue";
 }
 
+// Sample 3D Printer Data
+const printerData = [
+  {
+    model: "Ender 3 V2",
+    manufacturer: "Creality",
+    speed: "180",
+    volume: "220x220x250",
+    price: "279"
+  },
+  {
+    model: "Prusa i3 MK3S+",
+    manufacturer: "Prusa Research",
+    speed: "200",
+    volume: "250x210x210",
+    price: "999"
+  },
+  {
+    model: "Ultimaker S3",
+    manufacturer: "Ultimaker",
+    speed: "300",
+    volume: "230x190x200",
+    price: "4200"
+  },
+  {
+    model: "Anycubic Kobra",
+    manufacturer: "Anycubic",
+    speed: "180",
+    volume: "220x220x250",
+    price: "319"
+  }
+];
+
+// Function to populate the table
+function populatePrinterTable() {
+  const tableBody = document.querySelector("#printerTable tbody");
+
+  printerData.forEach(printer => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${printer.model}</td>
+      <td>${printer.manufacturer}</td>
+      <td>${printer.speed}</td>
+      <td>${printer.volume}</td>
+      <td>${printer.price}</td>
+    `;
+
+    tableBody.appendChild(row);
+  });
+}
+
+// Call the function after the DOM is loaded
+document.addEventListener("DOMContentLoaded", populatePrinterTable);
+
 // Function to fetch the JSON data and create the table
 function fetchPrinterData() {
   fetch('printers.json') // Adjust the path if the file is in a subfolder
