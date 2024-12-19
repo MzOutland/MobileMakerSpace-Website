@@ -33,8 +33,6 @@
   <body>
     <!--   Navbar   -->
 
-    <!--   Navbar   -->
-
    <nav>
     <ul class="nav-bar">
         <li><a href="https://www.tinkercad.com">Tinker Time </a></li>
@@ -44,8 +42,7 @@
     </ul>
 </nav>
 
-  
-    <!--   Header (image, title)   -->
+      <!--   Header (image, title)   -->
 
     <header>
       <h1>3D PRINTER MOBILE MAKERSPACE</h1>
@@ -85,6 +82,28 @@
             </ul>
           </article>
         </div>
+        <br>
+        <br>
+
+        <!-- Table Container -->
+        <table id="printerTable">
+          <caption>3D Printers</caption>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Manufacturer</th>
+              <th>Print Speed (mm/s)</th>
+              <th>Build Volume (mmx3)</th>
+              <th>Price (USD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Printer info will be inserted here by JavaScript-->
+          </tbody>
+
+          <!-- Data will be inserted here by JavaScript-->
+         </table>
+
         <div class="col-12 col-md-6">
           <aside>
             <h2>Equipment</h2>
@@ -111,7 +130,7 @@
                   3D Printers come in all shapes, sizes, and price. For a mobile 3d Makerspace, 
                   there are some options to consider. 
                 </p>
-                <img src="images/Bamboo3D printer.jpg" width="100%">
+                <img src="images/Bamboo3Dprinter.jpg" width="100%">
                 <br>
                 <img src="https://nextgenfurniture.com/cdn/shop/products/39-1105-4-A5M-open_5000x.jpg?v=1654181393" width="100%"
                 <a href="#" class="card-link">3d Printers for Mobility</a>
@@ -125,28 +144,7 @@
         <br>
         <h1>3D Printer Information</h1>
 
-        <!-- Table Container -->
-         <table id="printerTable">
-          <caption>3D Printers</caption>
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Manufacturer</th>
-              <th>Print Speed (mm/s)</th>
-              <th>Build Volume (mmx3)</th>
-              <th>Price (USD)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Printer info will be inserted here by JavaScript-->
-          </tbody>
-
-          <!-- Data will be inserted here by JavaScript-->
-         </table>
-
-           
-
-         <!-- API ThingiVerse-->
+     <!-- API ThingiVerse-->
          <h2>Thingiverse Popular 3D Models</h2>
         <section id="thingiverse">
           <div id="models-container">
